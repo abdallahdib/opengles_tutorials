@@ -107,6 +107,10 @@ namespace vvision
         CMeshGroup *group = new CMeshGroup();
         group->SetMaterialIndex(paiMesh->mMaterialIndex );
         
+        bool hasTangents = paiMesh->HasTangentsAndBitangents();
+        bool hasNormals = paiMesh->HasNormals();
+        
+   
         std::vector<CGpuVertex> &Vertices = group->GetVertices();
         std::vector<ushort16> &Indices = group->GetIndices();
         
@@ -144,10 +148,10 @@ namespace vvision
             if(pTexCoord != NULL)
                 v.texCoord = vec2f(pTexCoord->x, pTexCoord->y);
             
-            if(pNormal != NULL)
+            if(hasNormals && pNormal != NULL)
                 v.normal = vec3f(pNormal->x, pNormal->y, pNormal->z);
             
-            if(pTangCoord != NULL)
+            if(hasTangents && pTangCoord != NULL)
                 v.tangent = vec3f(pTangCoord->x, pTangCoord->y, pTangCoord->z);
             
             //extract bone indices and weights

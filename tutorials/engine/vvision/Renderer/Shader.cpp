@@ -329,6 +329,7 @@ namespace vvision
         matproj = glGetUniformLocation(m_uShadersProgram,               "matProj");
         matview = glGetUniformLocation(m_uShadersProgram,               "matView");
         matmodel = glGetUniformLocation(m_uShadersProgram,              "matModel");
+        matViewModel  = glGetUniformLocation(m_uShadersProgram,          "matViewModel");
         matprojviewmodel = glGetUniformLocation(m_uShadersProgram,      "matProjViewModel");
         matnormal = glGetUniformLocation(m_uShadersProgram,             "matNormal");
         
@@ -348,6 +349,8 @@ namespace vvision
         //bump
         textureBump = glGetUniformLocation(m_uShadersProgram, "textureBump");
         
+        //specular
+        textureSpecular = glGetUniformLocation(m_uShadersProgram, "textureSpecular");
         //detail
         textureDetail = glGetUniformLocation(m_uShadersProgram,     "textureDetail");
         useDetailTexture = glGetUniformLocation(m_uShadersProgram,  "useDetailTexture");

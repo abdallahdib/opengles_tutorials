@@ -110,9 +110,6 @@ void CWaterEntity::PrepareReflectionPass(CShader* shader, CCameraEntity* camera)
     //here we dont deal with the case where the camera is under the water surface, in this situation we have to render an addition refraction texture. 
     if(camPos.z >= m_fWaterHeight)
     {
-        //m_mCameraOriginalMatrix = camera->GetQuaternionRepresentation();
-        mat3f view3(camera->GetViewMatrix());
-        
         //the corresponding mirrored position 
         camPos.z = 2.0f * m_fWaterHeight - camPos.z;
         camTarget.z = 2.0f * m_fWaterHeight - camTarget.z;

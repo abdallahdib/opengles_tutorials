@@ -68,7 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D6058910D05DD3D006BFB54 /* vvision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vvision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* skybox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skybox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* vvision_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vvision_Prefix.pch; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* vvision.app */,
+				1D6058910D05DD3D006BFB54 /* skybox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 			);
 			name = vvision;
 			productName = RTeffects;
-			productReference = 1D6058910D05DD3D006BFB54 /* vvision.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* skybox.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -696,10 +696,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -715,7 +712,7 @@
 					"\"$(SRCROOT)/../../engine/vvision/ext/assimp/lib/ReleaseArmv7\"",
 					"\"$(SRCROOT)/../../engine/vvision/ext/assimp/lib/ReleaseI386\"",
 				);
-				PRODUCT_NAME = vvision;
+				PRODUCT_NAME = skybox;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -726,10 +723,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -743,7 +737,7 @@
 					"\"$(SRCROOT)/../../engine/vvision/ext/assimp/lib/ReleaseArmv7\"",
 					"\"$(SRCROOT)/../../engine/vvision/ext/assimp/lib/ReleaseI386\"",
 				);
-				PRODUCT_NAME = vvision;
+				PRODUCT_NAME = skybox;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -771,10 +765,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv7,
-					armv6,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -788,7 +779,7 @@
 					"\"$(SRCROOT)/../../engine/vvision/ext/assimp/lib/ReleaseArmv7\"",
 					"\"$(SRCROOT)/../../engine/vvision/ext/assimp/lib/ReleaseI386\"",
 				);
-				PRODUCT_NAME = vvision;
+				PRODUCT_NAME = skybox;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;

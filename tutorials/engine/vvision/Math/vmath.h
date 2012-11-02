@@ -1188,6 +1188,15 @@ public:
 			: x(nx), y(ny), z(nz), w(nw)
 	{
 	}
+    
+    /**
+	 * Creates vec4 from vec3
+	 * @param vec3 
+	 */
+    vec4(vec3<T> v)
+    : x(v.x), y(v.y), z(v.z), w(1)
+	{
+	}
 
 	/**
 	 * Copy constructor.
@@ -1603,6 +1612,7 @@ typedef vec4<int> vec4i;
  * If you're using row major mat, consider using fromRowMajorArray as way for construction
  * mat3<T> instance.
  */
+template <class T> class mat4;
 template<class T>
 class mat3
 {
@@ -1620,6 +1630,24 @@ public:
 			data[i] = (i % 4) ? 0 : 1;
 	}
 
+    /**
+	 * Creates mat3 from mat4 ( extract rotation part )
+	 */
+	mat3(const mat4<T>& mat)
+	{
+        data[0] =  mat[0];
+        data[1] =  mat[1];
+        data[2] =  mat[2];
+        
+        data[3] =  mat[4];
+        data[4] =  mat[5];
+        data[5] =  mat[6];
+        
+        data[6] =  mat[8];
+        data[7] =  mat[9];
+        data[8] =  mat[10];
+
+	}
 	/**
 	 * Copy mat values from array (these data must be in column
 	 * major order!)
