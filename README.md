@@ -1,4 +1,4 @@
-# OpengGL|ES tutorials
+# OpengGL | ES tutorials
 
 A series of OpenGL examples that cover various OpenGL rendering techniques for iOS, written in C++, and useful for someone who wants to start graphics programming.
 
